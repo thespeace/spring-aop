@@ -8,10 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;
 import thespeace.springAop.order.OrderRepository;
 import thespeace.springAop.order.OrderService;
-import thespeace.springAop.order.aop.AspectV1;
-import thespeace.springAop.order.aop.AspectV2;
-import thespeace.springAop.order.aop.AspectV3;
-import thespeace.springAop.order.aop.AspectV4;
+import thespeace.springAop.order.aop.*;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
@@ -35,7 +32,8 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 //@Import(AspectV1.class)
 //@Import(AspectV2.class)
 //@Import(AspectV3.class)
-@Import(AspectV4.class)
+//@Import(AspectV4.class)
+@Import({AspectV5Order.LogAspect.class, AspectV5Order.TxAspect.class})
 @SpringBootTest
 public class AopTest {
 
