@@ -10,6 +10,7 @@ import thespeace.springAop.order.OrderRepository;
 import thespeace.springAop.order.OrderService;
 import thespeace.springAop.order.aop.AspectV1;
 import thespeace.springAop.order.aop.AspectV2;
+import thespeace.springAop.order.aop.AspectV3;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
@@ -31,7 +32,8 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
  */
 @Slf4j
 //@Import(AspectV1.class)
-@Import(AspectV2.class)
+//@Import(AspectV2.class)
+@Import(AspectV3.class)
 @SpringBootTest
 public class AopTest {
 
