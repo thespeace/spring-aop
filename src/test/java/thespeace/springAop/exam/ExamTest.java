@@ -5,10 +5,12 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;
+import thespeace.springAop.exam.aop.RetryAspect;
 import thespeace.springAop.exam.aop.TraceAspect;
 
 @Slf4j
-@Import(TraceAspect.class)
+//@Import(TraceAspect.class)
+@Import({TraceAspect.class, RetryAspect.class})
 @SpringBootTest
 public class ExamTest {
 
